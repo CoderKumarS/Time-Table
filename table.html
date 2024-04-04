@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Dancing+Script&family=Rubik+Burned&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(110deg,
+                    rgba(63, 174, 214, 1) 0%,
+                    rgba(133, 187, 212, 1) 13%,
+                    rgba(193, 211, 218, 1) 28%,
+                    rgba(205, 219, 224, 1) 39%,
+                    rgba(221, 224, 223, 1) 50%,
+                    rgba(216, 210, 203, 1) 62%,
+                    rgba(210, 176, 175, 1) 74%,
+                    rgba(202, 134, 149, 1) 86%,
+                    rgba(190, 90, 119, 1) 100%);
+        }
+
+        #head {
+            text-align: left;
+            vertical-align: bottom;
+            font-size: 3em;
+            color: black;
+            letter-spacing: 10px;
+            font-family: 'Rubik Burned', system-ui;
+            position: relative;
+        }
+
+        #head:before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            height: 6px;
+            width: 0;
+            margin-bottom: 5px;
+            background: rgba(63, 174, 214, 1);
+            transition: width 0.3s ease;
+        }
+
+        #head:hover:before {
+            width: 70%;
+        }
+
+        #title {
+            font-family: 'Alfa Slab One', serif;
+        }
+
+        th {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        td {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            -webkit-backdrop-filter: blur(6.5px);
+            backdrop-filter: blur(6.5px);
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        td:hover,
+        td:active {
+            border-radius: 3px;
+            background: linear-gradient(145deg, #f0f0f0, #cacaca);
+            box-shadow: 5px 5px 19px #696969, -5px -5px 19px #ffffff;
+        }
+
+        table.center {
+            border-spacing: 5px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 60%;
+        }
+
+        @media screen and (max-width: 480px) {
+            th {
+                font-size: 0.9em;
+            }
+
+            td {
+                font-size: 0.4em;
+            }
+
+            #head {
+                font-size: 2em;
+            }
+
+            #head:hover:before {
+                width: 85%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table class="center">
+        <tr>
+            <th colspan="7" id="head">Time Table(K22MN)</th>
+        </tr>
+        <tr>
+            <th id="title">Timing</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+        <tr>
+            <td>09-10AM</td>
+            <td>Practical / G:0 <br>INT222</td>
+            <td>Tutorial / G:2 <br>PEA305</td>
+            <td>Practical / G:2 <br>CSE325</td>
+            <td>Lecture / G:All <br>INT222</td>
+            <td></td>
+            <td>Project Work/ Other <br> Weekly Activities. </td>
+        </tr>
+        <tr>
+            <td>10-11AM</td>
+            <td>Practical / G:0 <br>INT222</td>
+            <td>Lecture / G:All <br>PEA305</td>
+            <td>Practical / G:2 <br>CSE325</td>
+            <td>Lecture / G:All <br>INT222</td>
+            <td></td>
+            <td>Project Work/ Other <br> Weekly Activities. </td>
+        </tr>
+        <tr>
+            <td>11-12AM</td>
+            <td>Lecture / G:All <br>INT426</td>
+            <td>Lecture / G:All <br>CSE316</td>
+            <td>Lecture / G:All <br>PEA305</td>
+            <td>Practical / G:0 <br>INT219</td>
+            <td></td>
+            <td>Project Work/ Other <br> Weekly Activities. </td>
+        </tr>
+        <tr>
+            <td>12-01PM</td>
+            <td></td>
+            <td></td>
+            <td>Lecture / G:All <br>INT219</td>
+            <td>Practical / G:0 <br>INT219</td>
+            <td></td>
+            <td>Project Work/ Other <br> Weekly Activities. </td>
+        </tr>
+        <tr>
+            <td>01-02PM</td>
+            <td>Lecture / G:All <br>CSE316</td>
+            <td>Lecture / G:All <br>CSE310</td>
+            <td>Lecture / G:All <br>INT219</td>
+            <td></td>
+            <td>Practical / G:0 <br>CSE310</td>
+            <td>Project Work/ <br>Other Weekly Activities. </td>
+        </tr>
+        <tr>
+            <td>02-03PM</td>
+            <td></td>
+            <td>Lecture / G:All <br>CSE310</td>
+            <td></td>
+            <td></td>
+            <td>Practical / G:0 <br>CSE310</td>
+            <td>Project Work/ Other <br> Weekly Activities. </td>
+        </tr>
+        <tr>
+            <td>03-04PM</td>
+            <td></td>
+            <td></td>
+            <td>Lecture / G:All <br>CSE310</td>
+            <td></td>
+            <td>Lecture / G:All <br>CSE408</td>
+            <td>Project Work/ Other <br> Weekly Activities. </td>
+        </tr>
+        <tr>
+            <td>04-05PM</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Lecture / G:All <br>CSE316</td>
+            <td>Project Work/ Other <br> Weekly Activities. </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
